@@ -99,6 +99,8 @@ const data = [
     <span class='expandButton'></span>
   </div>
 
+
+
   Hint: You will need to use createElement more than once here!
 
   Your function should take either an object as it's one argument, or 5 separate arguments mapping to each piece of the data object above.
@@ -112,3 +114,61 @@ const data = [
   Step 5: Add a new article to the array. Make sure it is in the same format as the others. Refresh the page to see the new article.
 
 */
+
+
+
+const accordion = document.querySelector('.articles')
+
+
+function createArticle (title, date, firstParagraph, secondParagraph, thirdParagraph){
+  const article = document.createElement('div');
+  const articleTitle = document.createElement('h2');
+  const articleDate = document.createElement ('p');
+  const p1 = document.createElement('p');
+  const p2 = document.createElement('p');
+  const p3 = document.createElement('p');
+  const expand = document.createElement('span');
+ 
+
+  article.appendChild(articleTitle);
+  article.appendChild(articleDate);
+  article.appendChild(p1);
+  article.appendChild(p2);
+  article.appendChild(p3);
+  article.appendChild(expand);
+
+  article.classList.add('article');
+  articleDate.classList.add('date');
+  expand.classList.add('expandButton');
+
+  articleTitle.textContent = title;
+  articleDate.textContent = date;
+  p1.textContent = firstParagraph;
+  p2.textContent = secondParagraph;
+  p3.textContent = thirdParagraph;
+
+  expand.textContent = 'Click Here';
+
+  expand.addEventListener('click', e =>{
+    console.log('button clicked', e.target)
+    article.classList.toggle('article-open');
+  })
+
+  return article; 
+
+}
+
+
+data.forEach(data =>{
+  accordion.appendChild(createArticle(data.title, data.date, data.firstParagraph, data.secondParagraph, data.thirdParagraph))
+});
+
+data.push({
+  title: 'Hello, This is a new title',
+  date: ' January 11th, 2099',
+  firstParagraph: 'And right there you got an almighty cloud. You dont want to kill all your dark areas they are very important. Im gonna add just a tiny little amount of Prussian Blue.',
+
+  secondParagraph: 'Youve got to learn to fight the temptation to resist these things. Just let them happen. Follow the lay of the land. Its most important. A beautiful little sunset. Get tough with it, get strong. Everything is happy if you choose to make it that way. Painting should do one thing. It should put happiness in your heart',
+
+  thirdParagraph: 'The light is your friend. Preserve it. Everyone wants to enjoy the good parts - but you have to build the framework first. These things happen automatically. All you have to do is just let them happen. I like to beat the brush.'
+})
