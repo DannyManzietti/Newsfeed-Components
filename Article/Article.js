@@ -85,6 +85,16 @@ const data = [
     thirdParagraph: `Hodor hodor - hodor... Hodor hodor hodor hodor. Hodor. Hodor! Hodor hodor, hodor hodor hodor hodor hodor; hodor hodor? Hodor!
           Hodor hodor, HODOR hodor, hodor hodor?! Hodor! Hodor hodor, HODOR hodor, hodor hodor, hodor, hodor hodor. Hodor, hodor.
           Hodor. Hodor, hodor, hodor. Hodor hodor... Hodor hodor hodor?! Hodor, hodor... Hodor hodor HODOR hodor, hodor hodor. Hodor.`
+  },
+  
+  {
+  title: 'Hello, This is a new title',
+  date: ' January 11th, 2099',
+  firstParagraph: 'And right there you got an almighty cloud. You dont want to kill all your dark areas they are very important. Im gonna add just a tiny little amount of Prussian Blue.',
+
+  secondParagraph: 'Youve got to learn to fight the temptation to resist these things. Just let them happen. Follow the lay of the land. Its most important. A beautiful little sunset. Get tough with it, get strong. Everything is happy if you choose to make it that way. Painting should do one thing. It should put happiness in your heart',
+
+  thirdParagraph: 'The light is your friend. Preserve it. Everyone wants to enjoy the good parts - but you have to build the framework first. These things happen automatically. All you have to do is just let them happen. I like to beat the brush.'
   }
 ];
 
@@ -162,13 +172,3 @@ function createArticle (title, date, firstParagraph, secondParagraph, thirdParag
 data.forEach(data =>{
   accordion.appendChild(createArticle(data.title, data.date, data.firstParagraph, data.secondParagraph, data.thirdParagraph))
 });
-
-data.push({
-  title: 'Hello, This is a new title',
-  date: ' January 11th, 2099',
-  firstParagraph: 'And right there you got an almighty cloud. You dont want to kill all your dark areas they are very important. Im gonna add just a tiny little amount of Prussian Blue.',
-
-  secondParagraph: 'Youve got to learn to fight the temptation to resist these things. Just let them happen. Follow the lay of the land. Its most important. A beautiful little sunset. Get tough with it, get strong. Everything is happy if you choose to make it that way. Painting should do one thing. It should put happiness in your heart',
-
-  thirdParagraph: 'The light is your friend. Preserve it. Everyone wants to enjoy the good parts - but you have to build the framework first. These things happen automatically. All you have to do is just let them happen. I like to beat the brush.'
-})
