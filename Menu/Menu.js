@@ -34,7 +34,7 @@ let menuItems = [
   
 */
 
-  let hamburgerMenuImg = document.querySelector('.header .menu-button');
+  let hamburgerMenu = document.querySelector('.header .menu-button');
   let bodyVar = document.querySelector('body');
 
   function menuCreator(array) {
@@ -64,7 +64,7 @@ let menuItems = [
     menuMusic.textContent = array['4'];
     menuLogOut.textContent = array['5'];
 
-    hamburgerMenuImg.addEventListener('click', function () {
+    hamburgerMenu.addEventListener('click', function () {
       menu.classList.toggle('menu--open');
     });
 
